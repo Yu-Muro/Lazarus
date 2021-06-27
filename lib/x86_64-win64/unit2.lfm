@@ -1,0 +1,61 @@
+object Form2: TForm2
+  Left = 680
+  Height = 800
+  Top = 217
+  Width = 450
+  Caption = 'Form2'
+  ClientHeight = 800
+  ClientWidth = 450
+  Color = clWindow
+  Constraints.MaxHeight = 800
+  Constraints.MaxWidth = 450
+  Constraints.MinHeight = 800
+  Constraints.MinWidth = 450
+  DesignTimePPI = 120
+  Position = poScreenCenter
+  LCLVersion = '2.0.12.0'
+  object button1: TButton
+    Left = 56
+    Height = 48
+    Top = 128
+    Width = 334
+    Caption = 'Create New Room'
+    Color = clHighlight
+    OnClick = button1Click
+    TabOrder = 0
+  end
+  object Edit1: TEdit
+    Left = 56
+    Height = 28
+    Top = 200
+    Width = 334
+    TabOrder = 1
+    Text = 'ID'
+  end
+  object UserName: TLabel
+    Left = 144
+    Height = 20
+    Top = 64
+    Width = 153
+    Caption = 'UserName : User Name'
+    ParentColor = False
+  end
+  object Button2: TButton
+    Left = 56
+    Height = 53
+    Top = 264
+    Width = 336
+    Caption = 'Enter Room'
+    OnClick = Button2Click
+    TabOrder = 2
+  end
+  object Button3: TButton
+    Left = 56
+    Height = 60
+    Top = 352
+    Width = 336
+    Caption = 'Avatar Menu'
+    OnClick = Button3Click
+    TabOrder = 3
+  end
+end

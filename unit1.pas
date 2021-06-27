@@ -13,9 +13,9 @@ type
 
   TForm1 = class(TForm)
     Button1: TButton;
-    Edit1: TEdit;
+    Username: TEdit;
     procedure Button1Click(Sender: TObject);
-    procedure Edit1Change(Sender: TObject);
+    procedure UsernameChange(Sender: TObject);
   private
 
   public
@@ -30,15 +30,15 @@ implementation
 {$R *.lfm}
 
 { TForm1 }
-procedure TForm1.Edit1Change(Sender: TObject);
-begin
-  form2.edit1.text := edit1.text;
-end;
-
 procedure TForm1.Button1Click(Sender: TObject);
 begin
-  form2.show;
-  form1.Hide;
+  Form2.show;
+  Form1.hide;
+end;
+
+procedure TForm1.UsernameChange(Sender: TObject);
+begin
+   Form2.UserName.caption := 'User name : ' + Username.text;
 end;
 
 end.

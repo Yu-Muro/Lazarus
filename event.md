@@ -2,6 +2,8 @@
 
 ## Unit1
 
+### コード
+
 ``` Unit1
 unit Unit1;
 
@@ -49,7 +51,25 @@ end;
 end.
 ```
 
+### 変数表
+
+|No|変数名|値|型|クラス名|説明|
+|--|--|--|--|--|--|
+|1|Username.txt|入力された名前|String|Form1|利用開始時にユーザの名前を入力してもらう|
+|2|UserName.caption|ユーザの名前|String|Form2|入力した名前を表示|
+|3|Button1|なし|Boolean|Form1|利用開始のボタン|
+
+### 関数
+
+書式：TForm1.Button1.Click(sender: TObject)<br>
+機能：TOPページを表示しスタートページを隠す
+
+書式：TForm1.UsernameChange(Sender: TObject)<br>
+機能：名前が入力されたとき、入力された名前をForm2.UserName.captionに入れる
+
 ## Unit2
+
+### コード
 
 ``` Unit2
 uunit Unit2;
@@ -123,7 +143,30 @@ end;
 end.
 ```
 
+### 変数表
+
+|No|変数名|値|型|クラス名|説明|
+|--|--|--|--|--|--|
+|1|Edit1.txt|RoomのID|String|Form2|作成されているRoomのIDを入力|
+|2|UserName.caption|ユーザの名前|String|Form2|入力された名前を表示|
+|3|Button1|なし|Boolean|Form2|Room新規作成のボタン|
+|4|Button2|なし|Boolean|Form2|Roomに入るボタン|
+|5|Button3|なし|Boolean|Form2|アバターメニューのページを開くボタン|
+
+### 関数
+
+書式：TForm2.button1Click(Sender: TObject)<br>
+機能：新規作成ページを表示し、現在のページを隠す。すでに作成済みの場合、その場合に応じて表示項目を変動させる。
+
+書式：TForm2.Button2Click(Sender: TObject)<br>
+機能：RoomのIDが一致した場合、Roomページを開き、現在のページを隠す。
+
+書式：Form2.Button3Click(Sender: TObject)<br>
+機能：アバターページを開き、現在のページを隠す。
+
 ## Unit3
+
+### コード
 
 ``` Unit3
 unit Unit3;
@@ -140,7 +183,6 @@ type
   { TForm3 }
 
   TForm3 = class(TForm)
-    Button1: TButton;
     Button2: TButton;
     Button3: TButton;
     CheckBox1: TCheckBox;
@@ -251,6 +293,42 @@ end;
 
 end.
 ```
+### 変数表
+
+|No|変数名|値|型|クラス名|説明|
+|--|--|--|--|--|--|
+|1|Label1.caption|新規作成|String|Form3|新規作成と表示|
+|2|Label2.caption|Room ID|String|Form3|指定されたRoom ID|
+|3|Edit1.txt|Room ID|String|Form3|任意のRoom ID|
+|4|Button2|なし|Boolean|Form3|TOPページに戻る|
+|5|Button3|なし|Boolean|Form3|Roomを作成する|
+|6|RadioButton1|なし|Boolean|Form3|任意のRoomIDを使用する場合に選択|
+|7|RadioButton2|なし|Boolean|Form3|指定のRoomIDを使用する場合に選択|
+|8|CheckBox1|なし|Boolean|Form3|匿名機能を使用する場合にチェック|
+|9|CheckBox2|なし|Boolean|Form3|コメント機能を使用する場合にチェック|
+|10|CheckBox3|なし|Boolean|Form3|Q&A機能を使う場合にチェック|
+|11|Button1.caption|Comments|String|Form4|コメント機能を使う場合はComment、しない場合はNot Use it|
+|12|Button2.caption|Comments|String|Form4|Q&A機能を使う場合はQ and A、しない場合はNot Use it|
+
+### 関数
+
+書式：TForm3.RadioButton1Change(Sender: TObject)<br>
+機能：RadioButton1が選択されている場合はテキスト入力欄を表示し、RadioButton2が選択されている場合は指定のIDを表示する。
+
+書式：TForm3.RadioButton2Change(Sender: TObject)<br>
+機能：RadioButton1が選択されている場合はテキスト入力欄を表示し、RadioButton2が選択されている場合は指定のIDを表示する。
+
+書式：TForm3.Button2Click(Sender: TObject)<br>
+機能：TOPページを表示し、現在のページを隠す。
+
+書式：TForm3.Button3Click(Sender: TObject)<br>
+機能：RoomIDが指定されているかつ、CommentsとQ&Aのどちらか一方でも選択されている場合にRoomページを表示し、現在のページを隠す。
+
+書式：TForm3.CheckBox2Change(Sender: TObject)<br>
+機能：CommentsとQ and Aのどちらも選択されていない場合新規作成ボタンを隠す。
+
+書式：TForm3.CheckBox3Change(Sender: TObject)<br>
+機能：CommentsとQ and Aのどちらも選択されていない場合新規作成ボタンを隠す。
 
 ## Unit4
 
@@ -354,7 +432,37 @@ end;
 end.
 ```
 
+### 変数表
+
+|No|変数名|値|型|クラス名|説明|
+|--|--|--|--|--|--|
+|1|Label1.caption|Room ID|String|Form4|現在のRoomのID|
+|2|Label2.caption|モード|String|Form4|現在の入力モードを表示|
+|3|Edit1.txt|コメントや質問|String|Form4|ユーザが入力したコメントや質問|
+|4|Button1|なし|Boolean|Form4|Q and Aモードへの切り替え|
+|5|Button2|なし|Boolean|Form4|Commentsモードへの切り替え|
+|6|Button3|なし|Boolean|Form4|TOPページに戻る|
+|7|Button4|なし|Boolean|Form4|入力したEdit1.txtを送信|
+|8|CheckBox1|なし|Boolean|Form4|匿名機能の有効化|
+|8|Memo1|入力した内容|String|Form4|入力した内容の表示|
+
+### 関数
+
+書式：TForm4.Button3Click(Sender: TObject)<br>
+機能：TOPページを表示し、現在のページを隠す。
+
+書式：TForm4.Button4Click(Sender: TObject)<br>
+機能：入力した内容を送信する。匿名機能のONOFFで表示内容を変更
+
+書式：TForm4.Button2Click(Sender: TObject)<br>
+機能：コメントモードに切り替える
+
+書式：TForm4.Button1Click(Sender: TObject)<br>
+機能：Q&Aモードに切り替える
+
 ## Unit5
+
+### コード
 
 ``` Unit5
 unit Unit5;
@@ -408,3 +516,20 @@ end;
 
 end.
 ```
+
+### 変数表
+
+|No|変数名|値|型|クラス名|説明|
+|--|--|--|--|--|--|
+|1|Label1.caption|アバターメニュー|String|Form5|アバターメニューと表示|
+|2|Label2.caption|謝罪|String|Form5|準備中であることを表示|
+|3|Button1|なし|Boolean|Form5|TOPページに戻る|
+|4|Button2|なし|Boolean|Form5|アバターの利用を開始|
+
+### 関数
+
+書式：TForm5.Button1Click(Sender: TObject)<br>
+機能：TOPページを表示し、現在のページを隠す。
+
+書式：TForm5.Button2Click(Sender: TObject)<br>
+機能：ボタンを隠し、準備中であることを示す。

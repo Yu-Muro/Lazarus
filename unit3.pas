@@ -12,7 +12,6 @@ type
   { TForm3 }
 
   TForm3 = class(TForm)
-    Button1: TButton;
     Button2: TButton;
     Button3: TButton;
     CheckBox1: TCheckBox;
@@ -79,6 +78,7 @@ end;
 
 procedure TForm3.Button3Click(Sender: TObject);
 begin
+  Form4.Memo1.Lines.clear;
   if RadioButton1.Checked then Form4.Label1.caption := 'ID : ' + edit1.text;
   if RadioButton2.Checked then Form4.Label1.caption := 'ID : ' + Label2.caption;
   if not CheckBox1.checked then Form4.CheckBox1.hide;

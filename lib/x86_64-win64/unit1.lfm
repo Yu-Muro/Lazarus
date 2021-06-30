@@ -1,11 +1,11 @@
 object Form1: TForm1
-  Left = 1457
+  Left = 1194
   Height = 800
-  Top = 408
+  Top = 363
   Width = 450
   Caption = 'Form1'
-  ClientHeight = 0
-  ClientWidth = 0
+  ClientHeight = 800
+  ClientWidth = 450
   Color = clWindow
   Constraints.MaxHeight = 800
   Constraints.MaxWidth = 450
@@ -28,7 +28,7 @@ object Form1: TForm1
     Height = 49
     Top = 144
     Width = 344
-    Caption = 'Button1'
+    Caption = 'Start Use'
     Color = clHighlight
     OnClick = Button1Click
     TabOrder = 1

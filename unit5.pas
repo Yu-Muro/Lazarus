@@ -5,7 +5,7 @@ unit Unit5;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls;
 
 type
 
@@ -13,11 +13,11 @@ type
 
   TForm5 = class(TForm)
     Button1: TButton;
-    Button2: TButton;
+    Image1: TImage;
     Label1: TLabel;
     Label2: TLabel;
     procedure Button1Click(Sender: TObject);
-    procedure Button2Click(Sender: TObject);
+    procedure Image1Click(Sender: TObject);
   private
 
   public
@@ -33,17 +33,17 @@ implementation
 
     { TForm5 }
 
-    procedure TForm5.Button1Click(Sender: TObject);
-    begin
-      Form2.show;
-      Form5.hide;
-      Button2.Show;
-      Label2.hide;
-    end;
-
-procedure TForm5.Button2Click(Sender: TObject);
+procedure TForm5.Button1Click(Sender: TObject);
 begin
-    Button2.hide;
+    Form2.show;
+    Form5.hide;
+    Image1.Show;
+    Label2.hide;
+end;
+
+procedure TForm5.Image1Click(Sender: TObject);
+begin
+    Image1.hide;
     Label2.show;
 end;
 

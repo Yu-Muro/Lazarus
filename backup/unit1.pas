@@ -5,17 +5,18 @@ unit Unit1;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, EditBtn,
+  ExtCtrls;
 
 type
 
   { TForm1 }
 
   TForm1 = class(TForm)
-    Button1: TButton;
-    Username: TEdit;
-    procedure Button1Click(Sender: TObject);
-    procedure UsernameChange(Sender: TObject);
+    Image1: TImage;
+    LabeledEdit1: TLabeledEdit;
+    procedure Image1Click(Sender: TObject);
+    procedure LabeledEdit1Change(Sender: TObject);
   private
 
   public
@@ -30,15 +31,15 @@ implementation
 {$R *.lfm}
 
 { TForm1 }
-procedure TForm1.Button1Click(Sender: TObject);
+procedure TForm1.Image1Click(Sender: TObject);
 begin
   Form2.show;
   Form1.hide;
 end;
 
-procedure TForm1.UsernameChange(Sender: TObject);
+procedure TForm1.LabeledEdit1Change(Sender: TObject);
 begin
-   Form2.UserName.caption := 'User name : ' + Username.text;
+  Form2.UserName.caption := 'User Name : ' + LabeledEdit1.text;
 end;
 
 end.

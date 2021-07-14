@@ -122,8 +122,16 @@ begin
   Form4.Memo1.Lines.clear;
   Form4.Image4.hide;
   Form4.Button1.hide;
-  if RadioButton1.Checked then Form4.Label1.caption := 'ID : ' + edit1.text;
-  if RadioButton2.Checked then Form4.Label1.caption := 'ID : ' + Label2.caption;
+  if RadioButton1.Checked then
+      begin
+          Form2.Edit1.text := Edit1.text;
+          Form4.Label1.caption := 'ID : ' + edit1.text;
+      end;
+  if RadioButton2.Checked then
+      begin
+          Form2.Edit1.text := Label2.caption;
+          Form4.Label1.caption := 'ID : ' + Label2.caption;
+      end;
   if not CheckBox1.checked then Form4.CheckBox1.hide;
   if CheckBox1.checked then Form4.CheckBox1.show;
   if not CheckBox2.Checked then

@@ -60,13 +60,15 @@ object Form3: TForm3
     Text = 'IDを入力してください'
   end
   object Button2: TButton
-    Left = 16
-    Height = 22
-    Top = 16
-    Width = 69
+    Left = 15
+    Height = 30
+    Top = 15
+    Width = 90
     Caption = 'TOP'
     Color = clHotLight
+    Font.Height = -25
     OnClick = Button2Click
+    ParentFont = False
     TabOrder = 3
   end
   object CheckBox1: TCheckBox
